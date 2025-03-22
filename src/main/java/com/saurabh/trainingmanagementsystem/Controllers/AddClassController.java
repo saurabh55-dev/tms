@@ -1,23 +1,24 @@
 package com.saurabh.trainingmanagementsystem.Controllers;
 
-import com.saurabh.trainingmanagementsystem.Models.Course;
 import com.saurabh.trainingmanagementsystem.Models.DatabaseDriver;
-import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Time;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddClassController {
+
+    private static final Logger logger = LogManager.getLogger(AddClassController.class);
+
     public AnchorPane container;
     public VBox main_container;
     public HBox title_container;
@@ -44,6 +45,7 @@ public class AddClassController {
     }
 
     private List<String> fetchCourseFromDatabase() {
+
         List<String> courses = new ArrayList<>();
         String query = "SELECT course_name FROM course";
         try (Connection connection = DatabaseDriver.getConnection();
@@ -53,7 +55,7 @@ public class AddClassController {
                 courses.add(resultSet.getString("course_name"));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error: {}", e.getMessage(), e);
         }
         return courses;
     }

@@ -4,6 +4,7 @@ module com.saurabh.trainingmanagementsystem {
     requires de.jensd.fx.glyphs.fontawesome;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
+    requires org.apache.logging.log4j;
 
     opens com.saurabh.trainingmanagementsystem to javafx.fxml;
     exports com.saurabh.trainingmanagementsystem;

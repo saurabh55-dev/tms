@@ -47,13 +47,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getAddClassView() {
-        if (addClassView == null) {
             try {
                 addClassView = new FXMLLoader(getClass().getResource("/Fxml/AddClass.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return addClassView;
     }
 
@@ -68,13 +66,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getAddCourseView() {
-        if (addCourseView == null) {
             try {
                 addCourseView = new FXMLLoader(getClass().getResource("/Fxml/AddCourse.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return addCourseView;
     }
 
@@ -88,13 +84,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getAddStudentView() {
-        if (addStudentView == null) {
             try {
                 addStudentView = new FXMLLoader(getClass().getResource("/Fxml/AddStudent.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return addStudentView;
     }
 
@@ -126,13 +120,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getFeePaymentView() {
-        if (feePaymentView == null) {
             try {
                 feePaymentView = new FXMLLoader(getClass().getResource("/Fxml/PaymentPortal.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return feePaymentView;
     }
 
@@ -146,24 +138,20 @@ public class ViewFactory {
     }
 
     public AnchorPane getAddIncomeView() {
-        if (addIncomeView == null) {
             try {
                 addIncomeView = new FXMLLoader(getClass().getResource("/Fxml/AddIncome.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return addIncomeView;
     }
 
     public AnchorPane getAddExpenseView() {
-        if (addExpenseView == null) {
             try {
                 addExpenseView = new FXMLLoader(getClass().getResource("/Fxml/AddExpense.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return addExpenseView;
     }
 
@@ -177,13 +165,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getChangePasswordView() {
-        if (changePasswordView == null) {
             try {
                 changePasswordView = new FXMLLoader(getClass().getResource("/Fxml/ChangePassword.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return changePasswordView;
     }
 
