@@ -88,7 +88,7 @@ public class ViewCourseController implements Initializable {
     private void handleUpdateButtonAction(Course course) {
         try {
             // Load the update form FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/UpdateClassForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/UpdateCourseForm.fxml"));
             VBox root = loader.load();
 
             // Get the controller and pass the selected course
