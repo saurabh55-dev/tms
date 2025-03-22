@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/ViewAttendance.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.ViewAttendanceController">
+    <VBox fx:id="main_container" alignment="TOP_CENTER" prefHeight="700.0" prefWidth="750.0" spacing="10.0">
+        <!-- Title -->
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance Report" />
+        </HBox>
+
+        <!-- Filter Controls -->
+        <HBox fx:id="filter_container" alignment="CENTER" spacing="20.0">
+            <Label text="Select Class:" />
+            <ChoiceBox fx:id="class_choice" prefWidth="150.0" />
+            <RadioButton fx:id="present_day_radio" text="Present Day" userData="present_day">
+            <toggleGroup>
+               <ToggleGroup fx:id="filterToggleGroup" />
+            </toggleGroup></RadioButton>
+            <RadioButton fx:id="monthly_radio" text="Monthly" toggleGroup="$filterToggleGroup" userData="monthly" />
+            <RadioButton fx:id="total_radio" selected="true" text="Total" toggleGroup="$filterToggleGroup" userData="total" />
+         <Button fx:id="filter_btn" mnemonicParsing="false" text="Apply Filter" />
+            <Button fx:id="refresh_btn" mnemonicParsing="false" text="Refresh" />
+        </HBox>
+
+        <!-- TableView to display attendance report -->
+        <TableView fx:id="attendance_table" prefHeight="500.0" prefWidth="700.0">
+            <columns>
+                <!-- Column for Student Name -->
+                <TableColumn fx:id="student_name_column" prefWidth="200.0" text="Student Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="studentName" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Class -->
+                <TableColumn fx:id="class_column" prefWidth="200.0" text="Class">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="className" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Present Day Attendance -->
+                <TableColumn fx:id="present_day_column" prefWidth="100.0" text="Present Day">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="presentDayAttendance" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Monthly Attendance -->
+                <TableColumn fx:id="monthly_column" prefWidth="100.0" text="Monthly">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="monthlyAttendance" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Total Attendance -->
+                <TableColumn fx:id="total_column" prefWidth="100.0" text="Total">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="totalAttendance" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

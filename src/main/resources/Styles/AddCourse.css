@@ -1,0 +1,112 @@
+/* General styling for the AnchorPane */
+#container {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+}
+
+/* Styling for the main VBox container */
+#main_container {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* Styling for the title text */
+#title_label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+}
+
+/* Styling for the body container */
+#body_container {
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+}
+
+/* Styling for labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+/* Styling for text fields */
+.text-field {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #0078d7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.2), 10, 0, 0, 0);
+}
+
+/* Styling for the ChoiceBox */
+.choice-box {
+    -fx-font-size: 14px;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+/* Styling for buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005bb5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #004080;
+}
+
+/* Styling for the cancel button */
+#cancel_btn {
+    -fx-background-color: #ff4444;
+}
+
+#cancel_btn:hover {
+    -fx-background-color: #cc0000;
+}
+
+#cancel_btn:pressed {
+    -fx-background-color: #990000;
+}
+
+/* Padding and spacing adjustments */
+#button_container {
+    -fx-padding: 20px 0 0 0;
+}

@@ -1,0 +1,108 @@
+.container{
+    -fx-background-color: #eeeeee;
+}
+
+.user_name{
+    -fx-font-size: 2.6em;
+    -fx-font-family: "Calibri Light";
+}
+
+.date_lbl{
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.section_title{
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Calibri Light";
+}
+
+.accounts_view{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10 0 0 10;
+    -fx-padding: 10 0 10 0;
+    -fx-alignment: center;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #DDDDDD;
+    -fx-spacing: 10;
+}
+.account{
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 10, 0, 0, 10);
+}
+.account VBox{
+    -fx-background-color: #FFFFFF;
+}
+.account Text{
+    -fx-fill: #FFFFFF;
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 1.5em;
+}
+.account FontAwesomeIconView{
+    -fx-fill: #FFFFFF;
+}
+.account_gradient{
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+}
+.account_balance{
+    -fx-text-fill: white;
+    -fx-font-family: Calibri;
+    -fx-font-size: 1.8em;
+    -fx-font-weight: bold;
+}
+.account_number{
+    -fx-text-fill: white;
+    -fx-font-family: Calibri;
+    -fx-font-size: 1.5em;
+    -fx-text-alignment: center;
+}
+
+.transaction_listview {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 10px;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+}
+/* Style for each item in the ListView */
+.transaction_listview .list-cell {
+    -fx-background-color: #f9f9f9; /* Light gray background for items */
+    -fx-border-color: #e0e0e0; /* Light gray border between items */
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 10px;
+    -fx-text-fill: #333333; /* Dark gray text */
+}
+/* Style for selected items in the ListView */
+.transaction_listview .list-cell:filled:selected {
+    -fx-background-color: #4CAF50; /* Green background for selected items */
+    -fx-text-fill: white; /* White text for selected items */
+}
+/* Style for hovered items in the ListView */
+.transaction_listview .list-cell:filled:hover {
+    -fx-background-color: #e0e0e0; /* Light gray background on hover */
+    -fx-text-fill: #333333; /* Dark gray text on hover */
+}
+
+/* Style for the scrollbar */
+.transaction_listview .scroll-bar:vertical {
+    -fx-background-color: #f1f1f1; /* Light gray background for scrollbar */
+}
+
+.transaction_listview .scroll-bar:vertical .thumb {
+    -fx-background-color: #cccccc; /* Gray thumb for scrollbar */
+    -fx-background-radius: 5px; /* Rounded corners for thumb */
+}
+
+.transaction_listview .scroll-bar:vertical .increment-button,
+.transaction_listview .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent; /* Transparent buttons */
+    -fx-padding: 5px;
+}
+
+.transaction_listview .scroll-bar:vertical .increment-arrow,
+.transaction_listview .scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: #666666; /* Gray arrows */
+}

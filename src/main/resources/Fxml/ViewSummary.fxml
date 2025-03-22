@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="750.0" styleClass="container" stylesheets="@../Styles/ViewSummary.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.ViewSummaryController">
+    <Text fx:id="username_text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi, SOPAN!" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+    <Label fx:id="login_date" layoutX="708.0" layoutY="30.0" styleClass="date_lbl" text="Today, 2025-03-16" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Income/Expense Summary" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+    <HBox layoutX="127.0" layoutY="119.0" prefHeight="150.0" prefWidth="496.0" styleClass="accounts_view" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="119.0">
+        <AnchorPane prefHeight="140.0" prefWidth="230.0">
+            <styleClass>
+                <String fx:value="account" />
+                <String fx:value="account_gradient" />
+            </styleClass>
+            <Label fx:id="total_income" styleClass="account_balance" text="+ NPR. 5,00,000" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="16.0" />
+            <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+            <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_number" text="Total Income" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+        </AnchorPane>
+        <AnchorPane prefHeight="140.0" prefWidth="230.0">
+            <styleClass>
+                <String fx:value="account" />
+                <String fx:value="account_gradient" />
+            </styleClass>
+            <Label fx:id="total_expense" styleClass="account_balance" text="- NPR. 3,00,000" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0" />
+            <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+            <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Expenses" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+        </AnchorPane>
+    </HBox>
+    <Text layoutX="20.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Latest Income and Expenses" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="300.0" />
+    <ListView fx:id="transaction_listview" layoutX="20.0" layoutY="330.0" prefHeight="350.0" prefWidth="700.0" styleClass="transaction_listview" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+</AnchorPane>

@@ -1,0 +1,47 @@
+/* General styling for the AnchorPane */
+#container {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+}
+
+/* Styling for the main VBox container */
+#main_container {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* Styling for the title text */
+#title_label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+}
+
+/* Styling for the add class button */
+#add_class_btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+#add_class_btn:hover {
+    -fx-background-color: #005bb5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+#add_class_btn:pressed {
+    -fx-background-color: #004080;
+}
+
+/* Styling for the FlowPane */
+#classes_flowpane {
+    -fx-padding: 20px;
+}

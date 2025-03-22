@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/ViewStudent.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.ViewStudentController">
+    <VBox fx:id="main_container" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" spacing="10.0">
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="All Students" />
+        </HBox>
+
+        <!-- TableView to display students -->
+        <TableView fx:id="students_table" prefHeight="500.0" prefWidth="750.0">
+            <columns>
+                <!-- Column for Student Name -->
+                <TableColumn fx:id="name_column" prefWidth="189.0" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Email -->
+                <TableColumn fx:id="email_column" prefWidth="137.0" text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Address -->
+                <TableColumn fx:id="address_column" prefWidth="121.0" text="Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="address" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Phone -->
+                <TableColumn fx:id="phone_column" prefWidth="119.0" text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Actions (Update and Delete buttons) -->
+                <TableColumn fx:id="actions_column" prefWidth="170.0" text="Actions">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dummy" /> <!-- Dummy property, as buttons are added programmatically -->
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

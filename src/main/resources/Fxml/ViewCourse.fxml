@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/ViewCourse.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.ViewCourseController">
+    <VBox fx:id="main_container" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" spacing="10.0">
+        <!-- Title -->
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="View Courses" />
+        </HBox>
+
+        <!-- Button container for additional actions (e.g., Refresh) -->
+        <HBox fx:id="button_container" alignment="CENTER" spacing="20.0">
+            <Button fx:id="refresh_btn" mnemonicParsing="false" text="Refresh" />
+        </HBox>
+
+        <!-- TableView to display courses -->
+        <TableView fx:id="courses_table" prefHeight="500.0" prefWidth="750.0" >
+            <columns>
+                <!-- Column for Course Title -->
+                <TableColumn fx:id="course_title_column" prefWidth="250.0" text="Course Title" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="courseTitle" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Duration -->
+                <TableColumn fx:id="duration_column" prefWidth="100.0" text="Duration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Fees -->
+                <TableColumn fx:id="fees_column" prefWidth="100.0" text="Fees">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="fees" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Number of Enrolled Students -->
+                <TableColumn fx:id="enrolled_students_column" prefWidth="150.0" text="Enrolled Students">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="enrolledStudents" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Actions (Update and Delete buttons) -->
+                <TableColumn fx:id="actions_column" prefWidth="150.0" text="Actions">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dummy" /> <!-- Dummy property, as buttons are added programmatically -->
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/AddClass.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.AddClassController">
+    <VBox fx:id="main_container" alignment="CENTER" layoutX="85.0" layoutY="16.0" prefHeight="684.0" prefWidth="585.0" spacing="10.0">
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Class" />
+        </HBox>
+        <VBox fx:id="body_container" prefHeight="305.0" prefWidth="500.0">
+         <Label fx:id="start_label1" layoutX="30.0" layoutY="30.0" text="Required Time Format (HH:MM), Example: 09:05" />
+            <Label fx:id="start_label" text="Start Time:" />
+            <TextField fx:id="start_field" />
+            <Label fx:id="end_label" text="End Time:" />
+            <TextField fx:id="end_field" />
+            <Label fx:id="course_label" text="Select Course:" />
+            <ChoiceBox fx:id="course_choice" prefWidth="150.0" />
+        </VBox>
+        <HBox fx:id="button_container" alignment="TOP_CENTER" prefHeight="44.0" prefWidth="710.0" spacing="20.0">
+            <Button fx:id="add_btn" mnemonicParsing="false" text="Add New Class" />
+            <Button fx:id="cancel_btn" mnemonicParsing="false" text="Cancel" />
+        </HBox>
+    </VBox>
+</AnchorPane>

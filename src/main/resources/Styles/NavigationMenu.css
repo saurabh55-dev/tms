@@ -1,0 +1,139 @@
+.main_menu_container{
+    -fx-background-color: #EEEEEE;
+    -fx-alignment: center;
+}
+.left_container{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}
+/* Title/Logo Section */
+.title_container{
+    -fx-background-color: white;
+    -fx-background-radius: 20 20 0 0;
+    -fx-alignment: top_center;
+    -fx-padding: 10;
+}
+.title_container FontAwesomeIconView {
+    -fx-fill: #132A13;
+}
+.title_container Text{
+    -fx-fill: #000000;
+    -fx-font-size: 2em;
+}
+/* Navigation Section */
+.menu_container{
+    /*-fx-padding: 10 10 10 20;*/
+    -fx-spacing: 20;
+}
+.menu_container Button{
+    -fx-pref-width: 160;
+    -fx-pref-height: 20;
+    -fx-background-color: white;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1em;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 0, 6);
+}
+.menu_container Button:hover{
+    -fx-cursor: hand;
+}
+.menu_container Button FontAwesomeIconView {
+    -fx-fill: #132A13;
+}
+.alt_menu_btn {
+    -fx-pref-width: 110;
+    -fx-pref-height: 20;
+    -fx-background-color: #132A13;
+    -fx-text-fill: white;
+    -fx-font-size: 1.1em;
+    -fx-alignment: center;
+}
+.alt_menu_btn FontAwesomeIconView {
+    -fx-fill: white;
+}
+
+#change_password_btn {
+    -fx-pref-width: 160;
+    -fx-pref-height: 20;
+    -fx-background-color: #132A13;
+    -fx-text-fill: white;
+    -fx-font-size: 1.1em;
+    -fx-alignment: center;
+}
+
+/* Report Bug/Suggestion Section */
+.report_container {
+    -fx-background-color: #EEFFEE;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-padding: 10 0 10 0;
+}
+.report_container Text {
+    -fx-font-weight: bold;
+    -fx-fill: #132A13;
+}
+.report_container Label{
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+.report_container Button {
+    -fx-pref-width: 80;
+    -fx-background-color: #132A13;
+    -fx-text-fill: white;
+}
+.report_container Button:hover {
+    -fx-cursor: hand;
+}
+.report_container Button FontAwesomeIconView {
+    -fx-fill: white;
+}
+
+/* Accordion Styling */
+.accordion {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+}
+
+/* TitledPane Styling */
+.titled-pane {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 14px;
+}
+
+/* Styling for the TitledPane Title Bar */
+.titled-pane > .title {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, #aba7a7, 5, 0, 0, 6);
+}
+
+/* Hover effect on TitledPane */
+.titled-pane:hover {
+    -fx-background-color: #132A13;
+}
+
+/* Styling for TitledPane Content */
+.titled-pane > .content {
+    -fx-background-color: #ffffff;
+}
+
+/* Expanded TitledPane Header */
+.titled-pane:expanded > .title {
+    -fx-background-color: #132A13;
+}
+.titled-pane:expanded > .title .text {
+    -fx-fill: white; /* This ensures the title text is white */
+}
+
+/* Collapsed TitledPane Header */
+.titled-pane:collapsed > .title {
+    -fx-background-color: white;
+}

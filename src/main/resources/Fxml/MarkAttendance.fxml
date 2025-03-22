@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/MarkAttendance.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.MarkAttendanceController">
+    <VBox fx:id="main_container" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" spacing="10.0">
+        <!-- Title -->
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="9.0" prefWidth="760.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Mark Attendance" />
+        </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="760.0" spacing="10.0">
+         <children>
+            <Label fx:id="course_label" layoutX="10.0" layoutY="10.0" text="Select Course:" />
+            <ChoiceBox fx:id="course_choice" layoutX="90.0" layoutY="10.0" prefHeight="32.0" prefWidth="176.0" />
+               <Label fx:id="class_label" text="Select Class:" />
+               <ChoiceBox fx:id="class_choice" prefWidth="206.0" />
+               <Button fx:id="load_students_btn" mnemonicParsing="false" text="Load Students" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+
+        <!-- Course and Date Selection -->
+        <HBox fx:id="selection_container" alignment="CENTER" prefHeight="11.0" prefWidth="760.0" spacing="20.0">
+            <Label fx:id="date_label" text="Select Date:" />
+            <DatePicker fx:id="attendance_date" />
+        </HBox>
+
+        <!-- TableView to display students and mark attendance -->
+        <TableView fx:id="students_table" prefHeight="499.0" prefWidth="760.0">
+            <columns>
+            <TableColumn fx:id="id_column" prefWidth="168.0" text="Student Id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="name" />
+               </cellValueFactory>
+            </TableColumn>
+                <!-- Column for Student Name -->
+                <TableColumn fx:id="student_name_column" prefWidth="309.0" text="Student Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Attendance (Present/Absent) -->
+                <TableColumn fx:id="attendance_column" prefWidth="272.0" text="Attendance">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dummy" /> <!-- Dummy property, as CheckBox is added programmatically -->
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <!-- Button to save attendance -->
+        <HBox fx:id="button_container" alignment="CENTER" spacing="20.0">
+            <Button fx:id="save_attendance_btn" mnemonicParsing="false" text="Save Attendance" />
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="750.0" styleClass="container" stylesheets="@../Styles/dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.DashboardController">
+   <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hi, SOPAN!" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+   <Label fx:id="date_lbl" layoutX="702.0" layoutY="14.0" styleClass="account_number" text="Today, 2025-03-24" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+   <HBox layoutX="25.0" layoutY="108.0" prefHeight="150.0" prefWidth="700.0" styleClass="accounts_view" AnchorPane.topAnchor="150.0">
+      <AnchorPane prefHeight="140.0" prefWidth="230.0">
+         <styleClass>
+            <String fx:value="account" />
+            <String fx:value="account_gradient" />
+         </styleClass>
+         <Label fx:id="total_students" styleClass="account_balance" text="200" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="16.0" />
+         <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+         <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_number" text="Total Students" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      </AnchorPane>
+      <AnchorPane prefHeight="140.0" prefWidth="230.0">
+         <styleClass>
+            <String fx:value="account" />
+            <String fx:value="account_gradient" />
+         </styleClass>
+         <Label fx:id="total_classes" styleClass="account_balance" text="11" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0" />
+         <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+         <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Classes" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      </AnchorPane>
+      <AnchorPane layoutX="240.0" layoutY="10.0" prefHeight="140.0" prefWidth="230.0">
+         <styleClass>
+            <String fx:value="account" />
+            <String fx:value="account_gradient" />
+         </styleClass>
+         <Label fx:id="total_pending_fees" styleClass="account_balance" text="NPR. 1,50,000" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0" />
+         <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+         <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Fees" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      </AnchorPane>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="258.0" layoutY="350.0" prefHeight="150.0" prefWidth="235.0" styleClass="accounts_view" AnchorPane.topAnchor="350.0">
+      <AnchorPane prefHeight="140.0" prefWidth="230.0">
+         <styleClass>
+            <String fx:value="account" />
+            <String fx:value="account_gradient" />
+         </styleClass>
+         <Label fx:id="total_collected_fees" styleClass="account_balance" text="NPR. 64" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         <VBox layoutX="130.0" layoutY="-25.0" prefHeight="80.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="16.0" />
+         <FontAwesomeIconView glyphName="BANK" layoutX="187.0" layoutY="33.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
+         <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_number" text="Collected Fees" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+         <Text layoutX="20.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="account_number" text="Total" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" />
+      </AnchorPane>
+   </HBox>
+</AnchorPane>

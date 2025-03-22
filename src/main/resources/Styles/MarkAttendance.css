@@ -1,0 +1,167 @@
+/* General styling for the AnchorPane */
+#container {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+}
+
+/* Styling for the main VBox container */
+#main_container {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* Styling for the title text */
+#title_label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+}
+
+/* Styling for the course and date selection container */
+#selection_container {
+    -fx-padding: 10px 0;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER;
+}
+
+/* Styling for labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+/* Styling for the ChoiceBox */
+#class_choice, #course_choice {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Styling for the DatePicker */
+#attendance_date {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Styling for the TableView */
+#students_table {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+}
+
+/* Styling for TableView headers */
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #132A13;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px 5px 0 0;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Styling for TableView rows */
+.table-row-cell {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+/* Styling for TableView cells */
+.table-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5px;
+}
+
+/* Styling for the CheckBox in the attendance column */
+.check-box {
+    -fx-font-size: 14px;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #0078d7;
+}
+
+.check-box .box {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+/* Styling for buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005bb5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #004080;
+}
+
+/* Styling for the save attendance button */
+#save_attendance_btn {
+    -fx-background-color: #4CAF50;
+}
+
+#save_attendance_btn:hover {
+    -fx-background-color: #45a049;
+}
+
+#save_attendance_btn:pressed {
+    -fx-background-color: #3d8b40;
+}
+
+/* Styling for the load students button */
+#load_students_btn {
+    -fx-background-color: #0078d7;
+}
+
+#load_students_btn:hover {
+    -fx-background-color: #005bb5;
+}
+
+#load_students_btn:pressed {
+    -fx-background-color: #004080;
+}

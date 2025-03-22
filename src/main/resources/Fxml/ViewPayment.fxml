@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/ViewPayment.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.ViewPaymentController">
+    <VBox fx:id="main_container" alignment="CENTER" prefHeight="700.0" prefWidth="800.0" spacing="10.0">
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment History" />
+        </HBox>
+
+        <!-- Filter controls -->
+        <HBox fx:id="filter_container" alignment="CENTER" spacing="10.0">
+            <Label text="Filter by:" />
+            <ChoiceBox fx:id="filter_choice" prefWidth="150.0" />
+            <Button fx:id="filter_btn" mnemonicParsing="false" text="Apply Filter" />
+            <Button fx:id="refresh_btn" mnemonicParsing="false" text="Refresh" />
+        </HBox>
+
+        <!-- TableView to display students -->
+        <TableView fx:id="payment_history_table" prefHeight="500.0" prefWidth="750.0">
+            <columns>
+                <!-- Column for Student Name -->
+                <TableColumn fx:id="name_column" prefWidth="205.0" text="Student's Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Email -->
+                <TableColumn fx:id="course_column" prefWidth="155.0" text="Course">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Address -->
+                <TableColumn fx:id="date_column" prefWidth="110.0" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="address" />
+                    </cellValueFactory>
+                </TableColumn>
+            <TableColumn fx:id="method_column" prefWidth="73.0" text="Method">
+               <cellValueFactory>
+                  <PropertyValueFactory property="phone" />
+               </cellValueFactory>
+            </TableColumn>
+
+                <!-- Column for Phone -->
+                <TableColumn fx:id="amount_column" prefWidth="105.0" text="Amount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <!-- Column for Course -->
+                <TableColumn fx:id="due_column" prefWidth="111.0" text="Due">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="course" />
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

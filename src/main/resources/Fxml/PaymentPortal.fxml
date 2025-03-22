@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="container" prefHeight="700.0" prefWidth="750.0" stylesheets="@../Styles/PaymentPortal.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saurabh.trainingmanagementsystem.Controllers.PaymentPortalController">
+    <VBox fx:id="main_container" alignment="CENTER" layoutX="85.0" layoutY="16.0" prefHeight="684.0" prefWidth="585.0" spacing="10.0">
+        <HBox fx:id="title_container" alignment="CENTER" prefHeight="47.0" prefWidth="516.0">
+            <Text fx:id="title_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Portal" />
+        </HBox>
+        <VBox fx:id="body_container" prefHeight="305.0" prefWidth="500.0">
+            <Label text="Select Course:" />
+            <ChoiceBox fx:id="course_choice" prefWidth="150.0" />
+         <Label text="Select Student:" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                <ChoiceBox fx:id="student_choice" prefWidth="150.0"/>
+                <Label text="Student ID:"/>
+                <Label fx:id="sid_label"/>
+            </HBox>
+            <Label text="Remaining Payment Amount:" />
+         <Label fx:id="due_amount_lbl">
+            <VBox.margin>
+               <Insets left="200.0" />
+            </VBox.margin>
+         </Label>
+            <Label text="Payment Method:" />
+            <TextField fx:id="pay_method_field" />
+            <Label text="Payment Amount:" />
+            <TextField fx:id="pay_amount_field" />
+        </VBox>
+        <HBox fx:id="button_container" alignment="TOP_CENTER" prefHeight="44.0" prefWidth="710.0" spacing="20.0">
+            <Button fx:id="payment_btn" mnemonicParsing="false" text="Proceed Payment" />
+            <Button fx:id="cancel_btn" mnemonicParsing="false" text="Cancel" />
+        </HBox>
+    </VBox>
+</AnchorPane>

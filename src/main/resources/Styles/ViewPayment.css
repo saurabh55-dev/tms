@@ -1,0 +1,178 @@
+/* General styling for the AnchorPane */
+#container {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+}
+
+/* Styling for the main VBox container */
+#main_container {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* Styling for the title text */
+#title_label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+}
+
+/* Styling for the TableView */
+#students_table {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+}
+
+/* Styling for TableView headers */
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #132A13;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px 5px 0 0;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Styling for TableView rows */
+.table-row-cell {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+/* Styling for TableView cells */
+.table-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5px;
+}
+
+/* Styling for buttons in the actions column */
+.button {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005bb5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #004080;
+}
+
+/* Styling for the delete button */
+.delete-btn {
+    -fx-background-color: #ff4444;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #cc0000;
+}
+
+.delete-btn:pressed {
+    -fx-background-color: #990000;
+}
+
+/* Styling for the update button */
+.update-btn {
+    -fx-background-color: #4CAF50;
+}
+
+.update-btn:hover {
+    -fx-background-color: #45a049;
+}
+
+.update-btn:pressed {
+    -fx-background-color: #3d8b40;
+}
+
+/* Styling for the refresh button */
+#refresh_btn {
+    -fx-background-color: #4CAF50;
+}
+
+#refresh_btn:hover {
+    -fx-background-color: #45a049;
+}
+
+#refresh_btn:pressed {
+    -fx-background-color: #3d8b40;
+}
+
+/* Styling for the button container */
+#button_container {
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: CENTER;
+}
+
+/* Styling for the HBox containing buttons in the actions column */
+.actions-hbox {
+    -fx-spacing: 5px;
+    -fx-alignment: CENTER;
+}
+
+/* Styling for the filter container */
+#filter_container {
+    -fx-padding: 10px 0;
+}
+
+/* Styling for the filter ChoiceBox */
+#filter_choice {
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Styling for the filter button */
+#filter_btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+#filter_btn:hover {
+    -fx-background-color: #005bb5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+#filter_btn:pressed {
+    -fx-background-color: #004080;
+}
