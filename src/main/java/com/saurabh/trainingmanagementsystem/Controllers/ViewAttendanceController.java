@@ -65,15 +65,16 @@ public class ViewAttendanceController implements Initializable {
 
     private ObservableList<AttendanceReport> fetchAllAttendanceReports() {
         ObservableList<AttendanceReport> reports = FXCollections.observableArrayList();
-        String query = "SELECT s.name AS student_name, c.course_name AS class_name, " +
-                "SUM(CASE WHEN a.date = CURDATE() AND a.is_present = 1 THEN 1 ELSE 0 END) AS present_day, " +
-                "SUM(CASE WHEN MONTH(a.date) = MONTH(CURDATE()) AND a.is_present = 1 THEN 1 ELSE 0 END) AS monthly, " +
-                "SUM(CASE WHEN a.is_present = 1 THEN 1 ELSE 0 END) AS total " +
+        String query = "SELECT s.name AS student_name, " +
+                "       c.course_name AS class_name, " +
+                "       SUM(CASE WHEN a.date = DATE('now') AND a.is_present = 1 THEN 1 ELSE 0 END) AS present_day, " +
+                "       SUM(CASE WHEN STRFTIME('%m', a.date) = STRFTIME('%m', DATE('now')) AND a.is_present = 1 THEN 1 ELSE 0 END) AS monthly, " +
+                "       SUM(CASE WHEN a.is_present = 1 THEN 1 ELSE 0 END) AS total " +
                 "FROM attendance a " +
                 "JOIN student s ON a.student_id = s.student_id " +
                 "JOIN classes cl ON a.class_id = cl.class_id " +
                 "JOIN course c ON cl.course_id = c.course_id " +
-                "GROUP BY s.student_id, c.course_id";
+                "GROUP BY s.student_id, c.course_id;";
 
         try (Connection conn = DatabaseDriver.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query);

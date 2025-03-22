@@ -142,10 +142,10 @@ public class PaymentPortalController implements Initializable {
                 int courseId = rs.getInt("course_id");
 
                 // Save payment to the payment table
-                savePayment(studentId, courseId, paymentAmount, paymentMethod);
+                savePayment(conn, studentId, courseId, paymentAmount, paymentMethod);
 
                 // Update the payment_due table
-                updatePaymentDue(studentId, courseId, paymentAmount);
+                updatePaymentDue(conn, studentId, courseId, paymentAmount);
 
                 showAlert("Success", "Payment processed successfully!");
                 clearFields();
@@ -155,29 +155,26 @@ public class PaymentPortalController implements Initializable {
         }
     }
 
-    private void savePayment(int studentId, int courseId, double amount, String paymentMethod) {
+    private void savePayment(Connection conn, int studentId, int courseId, double amount, String paymentMethod) {
         String query = "INSERT INTO payment (student_id, course_id, payment_amount, payment_method, payment_date) " +
                 "VALUES (?, ?, ?, ?, ?)";
-
-        try (Connection conn = DatabaseDriver.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+        try (PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, studentId);
             pstmt.setInt(2, courseId);
             pstmt.setDouble(3, amount);
             pstmt.setString(4, paymentMethod);
-            pstmt.setDate(5, new Date(System.currentTimeMillis()));
+            pstmt.setString(5, new Date(System.currentTimeMillis()).toString());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private void updatePaymentDue(int studentId, int courseId, double paymentAmount) {
+    private void updatePaymentDue(Connection conn, int studentId, int courseId, double paymentAmount) {
         String query = "UPDATE payment_due SET due_amount = due_amount - ? " +
                 "WHERE student_id = ?";
 
-        try (Connection conn = DatabaseDriver.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
+        try (PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setDouble(1, paymentAmount);
             pstmt.setInt(2, studentId);
             pstmt.executeUpdate();

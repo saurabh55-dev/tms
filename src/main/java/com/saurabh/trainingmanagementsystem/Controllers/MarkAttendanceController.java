@@ -202,7 +202,7 @@ public class MarkAttendanceController implements Initializable {
                 for (Student student : students) {
                     pstmt.setInt(1, student.getStudentId());
                     pstmt.setInt(2, classId);
-                    pstmt.setDate(3, date);
+                    pstmt.setString(3, date.toString());
                     pstmt.setBoolean(4, student.isAttendance());
                     pstmt.addBatch();
                 }
@@ -244,7 +244,7 @@ public class MarkAttendanceController implements Initializable {
                 pstmt.setBoolean(1, student.isAttendance());
                 pstmt.setInt(2, student.getStudentId());
                 pstmt.setInt(3, classId);
-                pstmt.setDate(4, date);
+                pstmt.setString(4, date.toString());
                 pstmt.addBatch();
             }
 

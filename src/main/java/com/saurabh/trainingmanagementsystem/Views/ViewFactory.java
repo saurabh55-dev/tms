@@ -108,13 +108,11 @@ public class ViewFactory {
     }
 
     public AnchorPane getMarkAttendanceView() {
-        if (markAttendanceView == null) {
             try {
                 markAttendanceView = new FXMLLoader(getClass().getResource("/Fxml/MarkAttendance.fxml")).load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
         return markAttendanceView;
     }
 

@@ -60,7 +60,7 @@ public class AddExpenseController implements Initializable {
                 preparedStatement.setDouble(2, amountDouble);
                 preparedStatement.setString(3, purpose);
                 preparedStatement.setString(4, remarks);
-                preparedStatement.setDate(5, java.sql.Date.valueOf(today));
+                preparedStatement.setString(5, java.sql.Date.valueOf(today).toString());
                 preparedStatement.executeUpdate();
 
                 clearFields();

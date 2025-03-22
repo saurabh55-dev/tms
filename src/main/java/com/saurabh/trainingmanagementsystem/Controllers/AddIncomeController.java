@@ -57,7 +57,7 @@ public class AddIncomeController implements Initializable {
                 preparedStatement.setString(1, topic);
                 preparedStatement.setDouble(2, amountDouble);
                 preparedStatement.setString(3, remarks);
-                preparedStatement.setDate(4, java.sql.Date.valueOf(today));
+                preparedStatement.setString(4, java.sql.Date.valueOf(today).toString());
                 preparedStatement.executeUpdate();
 
                 clearFields();

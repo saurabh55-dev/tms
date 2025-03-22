@@ -97,12 +97,12 @@ public class ViewPaymentController implements Initializable {
             while (rs.next()) {
                 String studentName = rs.getString("student_name");
                 String course = rs.getString("course_name");
-                Date paymentDate = rs.getDate("payment_date");
+                String paymentDate = rs.getString("payment_date");
                 String paymentMethod = rs.getString("payment_method");
                 int amount = rs.getInt("payment_amount");
                 int dueAmount = rs.getInt("due_amount");
 
-                paymentHistory.add(new PaymentHistory(studentName, course, paymentDate, paymentMethod, amount, dueAmount));
+                paymentHistory.add(new PaymentHistory(studentName, course, Date.valueOf(paymentDate), paymentMethod, amount, dueAmount));
             }
         } catch (SQLException e) {
             e.printStackTrace();

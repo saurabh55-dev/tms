@@ -82,7 +82,7 @@ public class ViewSummaryController implements Initializable {
             while (rs.next()) {
                 String description = rs.getString("topic");
                 double amount = rs.getDouble("amount");
-                Date date = rs.getDate("date");
+                String date = rs.getString("date");
 
                 transactions.add("INCOME: " + description + " (+ NPR. " + amount + ") - " + date);
             }
@@ -100,7 +100,7 @@ public class ViewSummaryController implements Initializable {
                 String description = rs.getString("topic");
                 String purpose = rs.getString("purpose");
                 double amount = rs.getDouble("amount");
-                Date date = rs.getDate("date");
+                String date = rs.getString("date");
 
                 transactions.add("EXPENSE: " + description + " Purpose: "+ purpose +" (- NPR. " + amount + ") - " + date);
             }

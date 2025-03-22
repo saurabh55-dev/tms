@@ -66,6 +66,7 @@ public class ChangePasswordController implements Initializable {
     private void clearFields() {
         password_field1.clear();
         password_field2.clear();
+        error_lbl.setText("");
     }
 
     private void showAlert(String title, String message) {
