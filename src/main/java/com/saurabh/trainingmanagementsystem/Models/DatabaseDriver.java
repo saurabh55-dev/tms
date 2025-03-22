@@ -1,9 +1,12 @@
 package com.saurabh.trainingmanagementsystem.Models;
 
+import java.io.File;
 import java.sql.*;
 
 public class DatabaseDriver {
-    private static final String URL = "jdbc:sqlite:system.db";
+
+    public static final String DBPATH = System.getProperty("user.home") + "/Management_System/Database/system.db";
+    private static final String URL = "jdbc:sqlite:" + DBPATH;
 
     public static final String SCHEMA = "PRAGMA foreign_keys = ON;";
     private static final String LOGIN = "CREATE TABLE IF NOT EXISTS login (username TEXT NOT NULL PRIMARY KEY, password TEXT DEFAULT NULL);";
@@ -26,8 +29,9 @@ public class DatabaseDriver {
     }
 
     public static void initializeDatabase() {
+        initDbPath();
         try (var connection = getConnection();
-            var statement = connection.createStatement()) {
+             var statement = connection.createStatement()) {
             statement.execute(SCHEMA);
             statement.execute(LOGIN);
             statement.execute(COURSE);
@@ -46,17 +50,17 @@ public class DatabaseDriver {
         }
     }
 
-    public static void insertDefaultAdmin(){
-        try(var connection = getConnection();
-        var pstmt = connection.prepareStatement(CHECK_DATA);
-        var pstmt2 = connection.prepareStatement(DATA)){
+    public static void insertDefaultAdmin() {
+        try (var connection = getConnection();
+             var pstmt = connection.prepareStatement(CHECK_DATA);
+             var pstmt2 = connection.prepareStatement(DATA)) {
             ResultSet rs = pstmt.executeQuery();
-            if(!rs.next()){
+            if (!rs.next()) {
                 pstmt2.setString(1, "admin");
                 pstmt2.setString(2, "admin");
                 pstmt2.executeUpdate();
                 System.out.println("Default Admin Inserted");
-            }else{
+            } else {
                 System.out.println("Default Admin Already Exists");
             }
         } catch (Exception e) {
@@ -64,4 +68,20 @@ public class DatabaseDriver {
         }
     }
 
+    private static void initDbPath() {
+        try {
+            // Ensure directory exists
+            File dbFile = new File(DBPATH);
+            File parentDir = dbFile.getParentFile(); // Get parent directory
+
+            if (parentDir != null && !parentDir.exists()) {
+                boolean created = parentDir.mkdirs(); // Create directories if they don't exist
+                if (created) {
+                    System.out.println("Database directory created successfully: " + parentDir.getAbsolutePath());
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
